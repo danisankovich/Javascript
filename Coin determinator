@@ -1,0 +1,20 @@
+//Given a stock of coins that are valued at 1, 5, 7, 9, and 11, what is the smallest amount of coins you can use to add up to a given number?
+function CoinCount(num) {
+  var eleven = parseInt(num/11);
+  num -= 11*eleven;
+  var nine = parseInt(num/9);
+  num -= 9*nine;
+  var seven = parseInt(num/7);
+  num -= 7*seven;
+  var five = parseInt(num/5);
+  num -= 5*five;
+  var one = num;
+  if (one >= 3 && eleven >= 1) {
+    one -= 3;
+    eleven -= 1;
+    nine++;
+    five++;
+  }
+  return eleven + nine + seven + five + one;
+}
+console.log(CoinCount(16))
