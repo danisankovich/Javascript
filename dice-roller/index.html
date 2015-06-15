@@ -1,0 +1,54 @@
+<!doctype HTML>
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <form name=form>
+      <table>
+        <td colspan="4">Choose the Type of Dice and Number of Dice to Roll</td>
+        <tr>
+          <td>
+            <p><input type=radio name=sides onclick="die = 3" value='3'>3 Sided</p>
+            <p><input type=radio name=sides onclick="die = 4" value='4'>4 Sided</p>
+            <p><input type=radio name=sides onclick="die = 5" value='5'>5 Sided</p>
+            <p><input type=radio checked name=sides onclick="die = 6" value='6'>6 Sided</p>
+            <p><input type=radio name=sides onclick="die = 8" value='8'>8 Sided</p>
+          </td>
+          <td>
+            <p><input type=radio name=sides onclick="die = 10" value='10'>10 Sided</p>
+            <p><input type=radio name=sides onclick="die = 12" value='12'>12 Sided</p>
+            <p><input type=radio name=sides onclick="die = 20" value='20'>20 Sided</p>
+            <p><input type=radio name=sides onclick="die = 50" value='50'>50 Sided</p>
+            <p><input type=radio name=sides onclick="die = 100" value='100'>100 Sided</p>
+          </td>
+          <td>
+            <p><input type=radio name=number onclick="dice = 1" value='1'>1</p>
+            <p><input type=radio name=number onclick="dice = 2" value='2'>2</p>
+            <p><input type=radio checked name=number onclick="dice = 3" value='3'>3</p>
+            <p><input type=radio name=number onclick="dice = 4" value='4'>4</p>
+            <p><input type=radio name=number onclick="dice = 5" value='5'>5</p>
+          </td>
+          <td>
+            <p><input type=radio name=number onclick="dice = 6" value='6'>6</p>
+            <p><input type=radio name=number onclick="dice = 7" value='7'>7</p>
+            <p><input type=radio name=number onclick="dice = 8" value='8'>8</p>
+            <p><input type=radio name=number onclick="dice = 9" value='9'>9</p>
+            <p><input type=radio name=number onclick="dice = 10" value='10'>10</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan=2>
+            <input type=button value="Roll!!!" name=button class='button' onclick="dice_roll(die, dice)">
+            <input type=text class='text' size=10 name=text>
+          </td>
+          <td colspan=2>
+            <ul></ul>
+            <ul></ul>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
